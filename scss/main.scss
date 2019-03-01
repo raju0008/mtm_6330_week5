@@ -1,5 +1,16 @@
 @import "variables";
-@mixin liftup($height:high)
+@mixin liftup($height:high){
+  @if $height == high{
+    box-shadow: 1px 2px 5px 2px black;
+
+  }
+  @else if $height ==higher{
+    box-shadow: 2px 4px 10px 2px black;
+  }
+  @else if $height == highest{
+    box-shadow: 4px 8px 30px 2px black;
+  }
+}
 body{
   font-family: $font-text;
   background-color: $asphalt;
@@ -28,5 +39,11 @@ font-size: $text-font-size;
           }
         }
       }
+    }
+    .shape{
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: $text-font-size;
     }
   }
