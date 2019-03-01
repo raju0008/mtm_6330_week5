@@ -1,4 +1,5 @@
 @import "variables";
+@mixin liftup($height:high)
 body{
   font-family: $font-text;
   background-color: $asphalt;
